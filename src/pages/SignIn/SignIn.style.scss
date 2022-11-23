@@ -1,0 +1,42 @@
+.sign-in {
+    background-color: rgb(19, 0, 44);
+
+    input {
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        border-radius: 50rem;
+        background-color: white;
+        padding: .3rem 2rem .3rem 1rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-transform: uppercase;
+    }
+}
+
+.left-tile {
+    width: 34%;
+    height: 100vh;
+
+    h1 {
+        -webkit-text-stroke: 2px black;
+        font-size: 4rem;
+    }
+
+    div {
+        width: 100%;
+        height: 100%;
+        background: rgb(242, 211, 254);
+        background-image: url(../../assets/bgcool.webp);
+        background-size: cover;
+        border: 2px white solid;
+    }
+}
+
+.right-tile {
+    width: 66%;
+    height: 100vh;
+
+
+}
