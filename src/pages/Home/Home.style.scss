@@ -12,6 +12,21 @@
 .each-slide-effect span {
     padding: 20px;
     font-size: 20px;
-    background: #efefef;
     text-align: center;
+}
+
+.profile {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    background-size: cover;
+    border: 1px solid white;
+}
+
+.card {
+    height: 12rem;
+    width: 22%;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }

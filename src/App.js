@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import GlobalLoader from "./components/GlobalLoader";
 import SignIn from "./pages/SignIn/SignIn.page";
 import Home from "./pages/Home/Home.page";
-
+import { userContext } from './context/userContext'
 
 
 function App() {
@@ -13,21 +13,23 @@ function App() {
   useEffect(() => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
+      console.log(user)
       setUser(user);
     });
   }, []);
 
   return (
     <div className="App">
-      {user === undefined ? (
-        <GlobalLoader />
-      ) : (
-        <Routes>
-          <Route path="/" element={user ? <Home user={user} /> : <Navigate to="/signin" replace />} />
-          <Route path="/signin" element={user ? <Navigate to="/" /> : <SignIn />} />
-        </Routes>
-      )}
-
+      <userContext.Provider value={{ user, setUser }}>
+        {user === undefined ? (
+          <GlobalLoader />
+        ) : (
+          <Routes>
+            <Route path="/" element={user ? <Home user={user} /> : <Navigate to="/signin" replace />} />
+            <Route path="/signin" element={user ? <Navigate to="/" /> : <SignIn />} />
+          </Routes>
+        )}
+      </userContext.Provider>
     </div>
   );
 }
