@@ -42,8 +42,8 @@ function SignInPage() {
                     <div>
                         <h1 className='font-extrabold text-white pb-5 text-2xl'>Login to your account</h1>
                         <form className='flex flex-col items-center mb-5' onSubmit={() => { }}>
-                            <input type="text" name="" id="" />
-                            <input type="text" name="" id="" />
+                            <input type="text" placeholder="email" name="" id="" />
+                            <input type="text" placeholder="password" name="" id="" />
                             <button>Login</button>
                         </form>
                     </div>
