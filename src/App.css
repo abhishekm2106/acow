@@ -2,3 +2,25 @@ input {
   padding: .5rem;
   border-radius: .2rem;
 }
+
+button {
+  padding: .4rem 1rem .3rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+button:hover {
+  transform: rotate(360deg);
+  transform: scale(1.02);
+}
+
+/* font-family: 'Bebas Neue',
+cursive;
+font-family: 'Jost',
+sans-serif;
+font-family: 'Lobster',
+cursive;
+font-family: 'Teko',
+sans-serif;
+font-family: 'Nabla',
+cursive; */
