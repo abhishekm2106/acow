@@ -25,7 +25,8 @@ function App() {
           <GlobalLoader />
         ) : (
           <Routes>
-            <Route path="/" element={user ? <Home user={user} /> : <Navigate to="/signin" replace />} />
+            <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={user ? <Home user={user} /> : <Navigate to="/signin" replace />} />
             <Route path="/signin" element={user ? <Navigate to="/" /> : <SignIn />} />
           </Routes>
         )}
