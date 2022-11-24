@@ -48,7 +48,7 @@ function SignInPage() {
                         </form>
                     </div>
                     <div className=" text-white pb-5 ">------OR-------</div>
-                    <button className="flex items-center" onClick={() => signInWithGoogle()} ><FcGoogle /> <span className=" px-1"></span>Sign in with Google</button>
+                    <button className="flex items-center google-button" onClick={() => signInWithGoogle()} ><FcGoogle /> <span className=" px-1"></span>Sign in with Google</button>
                 </div>
             </div>
         </div>
