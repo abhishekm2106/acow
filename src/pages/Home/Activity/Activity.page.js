@@ -17,17 +17,37 @@ function Activitypage() {
                         <th>Team</th>
                         <th>location</th>
                         <th>Date</th>
-                        <th>Est. Exp.</th>
+
                     </tr>
                     <tr class="table-row">
                         <td class="crop-id">
                             <span className='pic' />
                             <span class="crop-name">Abhishek Mohanty</span>
                         </td>
+                        <td>Central</td>
+                        <td>Dubai</td>
+                        <td>13-12-2022</td>
+
+                    </tr>
+                    <tr class="table-row">
+                        <td class="crop-id">
+                            <span className='pic' />
+                            <span class="crop-name">Tarun Kumar</span>
+                        </td>
                         <td>Health</td>
                         <td>GOA</td>
                         <td>13-12-2022</td>
-                        <td>Rs. 10000</td>
+
+                    </tr>
+                    <tr class="table-row">
+                        <td class="crop-id">
+                            <span className='pic' />
+                            <span class="crop-name">Vrinda Kamanth</span>
+                        </td>
+                        <td>Health</td>
+                        <td>GOA</td>
+                        <td>13-12-2022</td>
+
                     </tr>
 
 

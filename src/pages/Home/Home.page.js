@@ -18,7 +18,7 @@ function Homepage() {
   return (
 
     <div className=' bg-c-black text-white min-h-screen p-8 '>
-      <header className='mb-9 pb-9 flex justify-between items-center px-1'>
+      <header className='mb-9 pb-5 flex justify-between items-center px-1'>
         <Link to="/" className='text-5xl' style={{ fontFamily: 'Nabla' }}>ACOW</Link>
         <div className='flex items-center'>
           <div className='profile mr-4' style={{ backgroundImage: `url(${user.photoURL})` }}></div>

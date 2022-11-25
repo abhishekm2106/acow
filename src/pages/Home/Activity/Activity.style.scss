@@ -759,7 +759,7 @@ div.name-card {
 
 .chat {
     width: 38%;
-    min-height: 40vh;
+    min-height: 45vh;
     max-height: 80vh;
     margin-top: 5rem;
 
@@ -779,8 +779,8 @@ div.name-card {
 }
 
 .live-dot {
-    width: .5rem;
-    height: .5rem;
+    width: .8rem;
+    height: .8rem;
     background-color: #17B978;
     border-radius: 50%;
     animation: fade-out 2s linear infinite;

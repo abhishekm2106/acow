@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Fade, Slide } from 'react-slideshow-image';
 import { BsPlusLg } from 'react-icons/bs';
 import { RiUser3Fill } from 'react-icons/ri';
@@ -109,6 +109,7 @@ function Dashboardpage() {
         setIsOpen(false);
     }
 
+    const [formTitle, setFormTitle] = useState("")
     return (
         <>
             {/* <Fade className=' border-r-2 px-2 slider' duration={2000}>
@@ -130,7 +131,12 @@ function Dashboardpage() {
             </Fade> */}
 
             <div>
-                <button className="flex items-center bg-c-blue border-solid border-white border-2 my-8  ml-auto" onClick={openModal}><BsPlusLg /><span className='ml-1 text-2xl'>add my chill plan</span></button>
+                <div className='flex justify-end w-full'>
+                    <button className="flex items-center bg-c-black border-solid border-white border-2 my-8  ml-3" onClick={openModal}><BsPlusLg /><span className='ml-1 text-2xl'>add team activities</span></button>
+                    <button className="flex items-center bg-white text-c-blue border-solid border-white border-2 my-8  ml-3" onClick={openModal}><BsPlusLg /><span className='ml-1 text-2xl'>add HR activities</span></button>
+                    <button className="flex items-center bg-c-blue border-solid border-white border-2 my-8  ml-3" onClick={openModal}><BsPlusLg /><span className='ml-1 text-2xl'>add my chill plan</span></button>
+                </div>
+
                 <Modal
                     isOpen={modalIsOpen}
 
@@ -139,16 +145,29 @@ function Dashboardpage() {
                     contentLabel="Example Modal"
                 >
                     <div className=' bg-c-blue w-full h-full flex flex-col'>
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between font-semibold text-xl'>
                             <h2 >Add Chill plan</h2>
                             <button className='p-0' onClick={closeModal}>X</button>
                         </div>
 
 
                         <form>
+
+                            <div className='mt-2'>
+
+                                <select className='text-black' id='lll'>
+                                    <option value="actual value 1">Select Category</option>
+                                    {
+                                        activities.map(item => (
+                                            <option value="actual value 2">{item.title}</option>
+                                        ))
+                                    }
+
+
+                                </select>
+                            </div>
                             <div>Where do u plan to Go.</div>
                             <input className='  w-full' type="text" />
-
 
                             <div className=' my-2'>
                                 <label className=' mr-2' for="birthday">when do u plan to go : </label>
