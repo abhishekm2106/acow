@@ -1,5 +1,6 @@
 .sign-in {
     background-color: rgb(19, 0, 44);
+    overflow: hidden;
 
     input {
         width: 20rem;
@@ -39,6 +40,6 @@
 .right-tile {
     width: 66%;
     height: 100vh;
-
+    transform: scale(1.3);
 
 }

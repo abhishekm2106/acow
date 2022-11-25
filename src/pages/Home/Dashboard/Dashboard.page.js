@@ -92,7 +92,8 @@ function Dashboardpage() {
             transform: 'translate(-50%, -50%)',
             backgroundColor: '#4628D7',
             width: '30rem',
-            color: 'white'
+            color: 'white',
+            zIndex: '100'
         },
     };
 
@@ -110,7 +111,7 @@ function Dashboardpage() {
 
     return (
         <>
-            {/* <Fade className=' border-r-2 px-2 z-0' duration={2000}>
+            {/* <Fade className=' border-r-2 px-2 slider' duration={2000}>
                 <div className="each-slide-effect">
                     <div style={{ 'backgroundImage': `url(${images[0]})` }}>
                         <span>Slide 1</span>

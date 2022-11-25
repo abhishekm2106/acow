@@ -36,12 +36,15 @@ function Activitypage() {
             </section>
             <section className='chat py-9 px-5 bg-c-blue rounded-md'>
                 <div className=' flex items-center'>
+
                     <div className=' text-2xl'> Live Chat</div>
                     <div className='live-dot ml-1'></div>
                 </div>
                 <div className=' bg-white rounded-md h-full px-3 flex flex-col justify-between py-2'>
-                    <div className='messages h-5/6'></div>
-                    <input className=' bg-c-blue rounded-full px-4 w-full' type="text" />
+                    <div className='messages h-5/6'>
+                        <img src="../../../assets/chat.png" alt="" />
+                    </div>
+                    <input placeholder='type your message here' className=' bg-c-blue rounded-full px-4 w-full' type="text" />
                 </div>
             </section>
         </div>
