@@ -3,6 +3,8 @@ import { Fade, Slide } from 'react-slideshow-image';
 import { BsPlusLg } from 'react-icons/bs';
 import { RiUser3Fill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+import './Dashboard.style.scss'
 
 function Dashboardpage() {
     const images = [
@@ -80,9 +82,35 @@ function Dashboardpage() {
 
     ]
 
+    const customStyles = {
+        content: {
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            backgroundColor: '#4628D7',
+            width: '30rem',
+            color: 'white'
+        },
+    };
+
+    const onSubmit = () => {
+        console.log("done")
+    }
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
+
     return (
         <>
-            <Fade className=' border-r-2 px-2' duration={400}>
+            {/* <Fade className=' border-r-2 px-2 z-0' duration={2000}>
                 <div className="each-slide-effect">
                     <div style={{ 'backgroundImage': `url(${images[0]})` }}>
                         <span>Slide 1</span>
@@ -98,10 +126,40 @@ function Dashboardpage() {
                         <span>Slide 3</span>
                     </div>
                 </div>
-            </Fade>
+            </Fade> */}
 
             <div>
-                <button className="flex items-center bg-c-blue border-solid border-white border-2 my-8  ml-auto"><BsPlusLg /><span className='ml-1 text-2xl'>add my chill plan</span></button>
+                <button className="flex items-center bg-c-blue border-solid border-white border-2 my-8  ml-auto" onClick={openModal}><BsPlusLg /><span className='ml-1 text-2xl'>add my chill plan</span></button>
+                <Modal
+                    isOpen={modalIsOpen}
+
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="Example Modal"
+                >
+                    <div className=' bg-c-blue w-full h-full flex flex-col'>
+                        <div className='flex justify-between'>
+                            <h2 >Add Chill plan</h2>
+                            <button className='p-0' onClick={closeModal}>X</button>
+                        </div>
+
+
+                        <form>
+                            <div>Where do u plan to Go.</div>
+                            <input className='  w-full' type="text" />
+
+
+                            <div className=' my-2'>
+                                <label className=' mr-2' for="birthday">when do u plan to go : </label>
+                                <input type="date" />
+                            </div>
+                            <button onClick={(e) => { e.preventDefault(); closeModal() }} className=' mx-auto border-white border-solid border-2'>Submit</button>
+                        </form>
+
+                    </div>
+
+
+                </Modal>
                 <div className="flex justify-between items-center flex-wrap">
                     {
                         activities.map(item => (
@@ -120,7 +178,7 @@ function Dashboardpage() {
                     }
 
                 </div>
-            </div>
+            </div >
 
         </>
     )

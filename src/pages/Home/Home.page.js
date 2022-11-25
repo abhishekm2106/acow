@@ -11,13 +11,14 @@ import Activitypage from './Activity/Activity.page';
 import { Link, Outlet, Route, Routes } from 'react-router-dom';
 
 
+
 function Homepage() {
 
   const { user } = useContext(userContext)
   return (
 
     <div className=' bg-c-black text-white min-h-screen p-8 '>
-      <header className='mb-4 flex justify-between items-center px-1'>
+      <header className='mb-9 pb-5 flex justify-between items-center px-1'>
         <Link to="/" className='text-5xl' style={{ fontFamily: 'Nabla' }}>ACOW</Link>
         <div className='flex items-center'>
           <div className='profile mr-4' style={{ backgroundImage: `url(${user.photoURL})` }}></div>
