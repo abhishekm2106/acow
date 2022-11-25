@@ -6,6 +6,8 @@ import GlobalLoader from "./components/GlobalLoader";
 import SignIn from "./pages/SignIn/SignIn.page";
 import Home from "./pages/Home/Home.page";
 import { userContext } from './context/userContext'
+import Dashboardpage from './pages/Home/Dashboard/Dashboard.page';
+import Activitypage from './pages/Home/Activity/Activity.page';
 
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
           <GlobalLoader />
         ) : (
           <Routes>
-            <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={user ? <Home user={user} /> : <Navigate to="/signin" replace />} />
-            <Route path="/signin" element={user ? <Navigate to="/" /> : <SignIn />} />
+            <Route path="/" element={user ? <Home user={user} /> : <Navigate to="/signin" replace />}>
+              <Route path="/" element={<Dashboardpage />} />
+              <Route path="/activities/:name" element={<Activitypage />} />
+            </Route>
+            <Route path="signin" element={user ? <Navigate to="/" /> : <SignIn />} />
           </Routes>
         )}
       </userContext.Provider>

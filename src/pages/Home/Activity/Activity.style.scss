@@ -1,0 +1,795 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.heading-primary {
+    font-size: 4rem;
+    color: #071A52;
+    font-weight: 700;
+}
+
+.heading-tertiary {
+    font-size: 2.5rem;
+    color: #071A52;
+    font-weight: 500;
+}
+
+.my-para {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #071A52;
+    font-family: Microsoft YaHei UI;
+    font-weight: 100;
+}
+
+.my-para__info {
+    font-size: 2rem;
+    color: #071A52;
+    font-family: Microsoft YaHei UI;
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Remachine Script Personal Use;
+    //src: url(../fonts/RemachineScript_Personal_Use.ttf);
+}
+
+
+
+
+
+
+
+/* 
+Scroll-Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #071A52;
+    /* border: 7px solid #071A52; */
+    box-shadow: inset 0 0 10px 2px #28b4855b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #34009c, #bbc0ff);
+    border-radius: 3px;
+}
+
+.margin-bottom-small {
+    margin-bottom: .5rem;
+}
+
+.margin-bottom-med {
+    margin-bottom: 2rem;
+}
+
+.margin-bottom-big {
+    margin-bottom: 3.5rem;
+}
+
+.margin-left-med {
+    margin-left: 3rem;
+}
+
+.bg-grey {
+    background-color: #F4F4F4;
+}
+
+@font-face {
+    font-family: Remachine Script Personal Use;
+    //src: url(../fonts/RemachineScript_Personal_Use.ttf);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-leave {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 5rem;
+}
+
+#navbar-custom {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: #071A52;
+    height: 6.3rem;
+    padding: 0 10rem 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+}
+
+.nav-links-custom {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    position: relative;
+    list-style-type: none;
+}
+
+.nav-item {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#marker {
+    position: absolute;
+    left: 0;
+    height: .4rem;
+    width: 0;
+    background-color: #17B978;
+    bottom: -.8rem;
+    transition: 0.4s ease;
+    border-radius: .3rem;
+}
+
+.logo-text {
+    font-family: Remachine Script Personal Use;
+    font-size: 4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .top-leave {
+        display: none;
+    }
+
+    .line {
+        width: 4rem;
+        height: .4rem;
+        background-color: white;
+        z-index: 20;
+        margin: .5rem;
+        border-radius: 5rem;
+        box-shadow: 0 0.5rem 0.8rem black;
+    }
+
+    .hamburger {
+        margin-right: 2rem;
+        cursor: pointer;
+        z-index: 30;
+    }
+
+    #navbar-custom {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links-custom {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        background-color: #17B978;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 20;
+        margin: 0;
+        clip-path: circle(0rem at 98% 1%);
+        -webkit-clip-path: circle(0rem at 98% 1%);
+        transition: all .5s ease-out;
+    }
+
+    .nav-links-custom.open {
+        clip-path: circle(100rem at 98% 1%);
+        -webkit-clip-path: circle(100rem at 98% 1%);
+    }
+
+    .nav-item {
+        opacity: 0;
+    }
+
+    .nav-item:nth-child(2) {
+        transition: opacity .5s ease 0.2s;
+    }
+
+    .nav-item:nth-child(3) {
+        transition: opacity .5s ease 0.4s;
+    }
+
+    .nav-item:nth-child(4) {
+        transition: opacity .5s ease 0.6s;
+    }
+
+    .nav-item:nth-child(5) {
+        transition: opacity .5s ease 0.8s;
+    }
+
+    .nav-item:nth-child(6) {
+        transition: opacity .5s ease 1s;
+    }
+
+    .nav-item.fade {
+        opacity: 1;
+    }
+
+    .hamburger.fade {
+        position: fixed;
+        right: 0;
+        z-index: 40;
+        opacity: 1;
+    }
+}
+
+.footer {
+    width: 100%;
+    display: block;
+    position: relative;
+}
+
+.footer__logo {
+    margin-top: -2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer__logo-text {
+    font-size: 5rem;
+    font-family: Remachine Script Personal Use;
+}
+
+.footer__top {
+    background-color: #071A52;
+}
+
+.footer__top__row {
+    padding: 5rem 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer__top__big-col {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+}
+
+.footer__top__big-col .about-us {
+    font-size: 1.3rem;
+    margin-bottom: 1.4rem;
+    border-left: 0.5rem solid #17B978;
+    padding-left: 1rem;
+    width: 90%;
+}
+
+.footer__top__big-col .contact {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer__top__big-col .email {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+
+.footer__top__big-col .social {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5rem;
+}
+
+.footer__top__big-col .social>*:hover {
+    color: #17B978;
+    cursor: pointer;
+}
+
+.footer__top__col {
+    height: 100%;
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer__top-links {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+    width: 7rem;
+}
+
+.footer__top-links:hover {
+    text-decoration: underline;
+}
+
+.footer__top-links__heading {
+    font-size: 1.4rem;
+    color: burlywood;
+    margin-bottom: 2rem;
+}
+
+.footer__mid {
+    background-color: #086972;
+}
+
+.footer__mid__list {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.footer__mid__list__element {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+.footer__mid__list__element:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer .copyright-tag {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: #b899ff;
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.page-links {
+    width: 70%;
+    height: 70rem;
+    margin: 0 auto;
+    padding-top: 48rem;
+}
+
+.last {
+    //background-image: url("../images/Group 57.png");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -10rem;
+}
+
+.links-heading {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+.bottom-links {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+}
+
+.table-section {
+    margin: 0 auto;
+    width: 60%;
+}
+
+table {
+    width: 100%;
+    border: none;
+}
+
+table tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+table th {
+    color: #979797;
+    text-transform: uppercase;
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+table td {
+    text-align: center;
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: black;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table .crop-id-h {
+    flex: 2;
+}
+
+table .table-row {
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.15);
+    display: flex;
+}
+
+table .table-row .crop-id {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    text-transform: capitalize;
+}
+
+table .table-row .crop-id .row-image {
+    height: 5rem;
+    display: inline-block;
+    transform: scale(1.4);
+}
+
+table .table-row .crop-id .crop-name {
+    margin-left: .6rem;
+    display: inline-block;
+}
+
+.name-card {
+    position: relative;
+    margin: 3rem;
+    flex-basis: 20rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 33rem;
+    box-shadow: 1rem 1rem 2.5rem rgba(0, 0, 0, 0.5);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.rating {
+    margin: 2rem;
+    width: 4.5rem;
+    height: 2.4rem;
+    border-radius: .5rem;
+    background-color: #28b485;
+    color: white;
+    font-size: 1.2rem;
+    padding: .1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.dp {
+    //background-image: url("../images/person/person1.jpg");
+    height: 12rem;
+    width: 12rem;
+    clip-path: circle(50% at 50% 50%);
+    background-size: cover;
+}
+
+.name {
+    line-height: 2.2rem;
+    font-size: 2rem;
+    color: #071A52;
+    font-weight: 700;
+}
+
+.location {
+    font-size: 1.6rem;
+    color: #071A52;
+}
+
+.fa-star {
+    margin-left: .3rem;
+}
+
+div.name-card {
+    display: inline-block;
+}
+
+.card-text {
+    font-size: 1.5rem;
+}
+
+.myButton {
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mainButtn {
+    background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+    color: white;
+}
+
+.seeMore {
+    color: #071A52;
+    border-color: #071A52;
+    text-align: center;
+    border-width: .3rem;
+    border-style: solid;
+    font-weight: 700;
+    background-color: white;
+}
+
+.seeMore:hover {
+    color: #071A52;
+}
+
+.myButton:link,
+.myButton:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all .2s;
+    font-size: 1.6rem;
+}
+
+.myButton:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.myButton:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.fa-arrow-right {
+    margin-left: 2rem;
+}
+
+.circle-btn {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.slide-butn {
+    position: absolute;
+    color: #071A52;
+    font-size: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.big-button {
+    height: 10rem;
+    border-radius: 5px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.big-button:hover {
+    cursor: pointer;
+}
+
+.big-button:hover .big-button__heading {
+    font-size: 2rem;
+}
+
+.big-button:hover .big-button__image {
+    transform: scale(1);
+    filter: blur(1px) brightness(65%);
+}
+
+.big-button__heading {
+    font-size: 1.6rem;
+    color: white;
+    transition: all .5s;
+}
+
+.big-button__image {
+    transform: scale(1.1);
+    z-index: -10;
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+}
+
+.info-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 23%;
+    height: 20rem;
+    border-radius: 1rem;
+    background-color: #071A52;
+    margin-bottom: 3rem;
+    background-color: #f0f0f0;
+    box-shadow: 0.2rem 0.8rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all .2s;
+    padding: 1.5rem;
+}
+
+.info-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0.2rem 0.8rem 2rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.info-card__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    width: 25%;
+    height: 40%;
+    background-color: #071A52;
+}
+
+.info-card__image .image-source {
+    width: 120%;
+}
+
+.info-card__desc {
+    width: 65%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info-card__desc__name {
+    font-size: 1.8rem;
+}
+
+.info-card__desc__environment {
+    background-color: #071A52;
+    color: white;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.info-card__desc__temp {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    align-items: center;
+    width: 50%;
+}
+
+.info-card__desc__price {
+    font-size: 1.6rem;
+    color: #17B978;
+}
+
+.info-card__see-more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+.info-card__see-more a {
+    color: #17B978;
+}
+
+@media (max-width: 1000px) {
+    .info-card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 800px) {
+    .info-card {
+        width: 42%;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-card {
+        width: 75%;
+    }
+}
+
+.search {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.search-box {
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem 1.5rem;
+    background-color: #d8e2ee;
+    width: 100%;
+}
+
+.search-box:focus+.fa-search {
+    display: none;
+}
+
+.search .fa-search {
+    position: absolute;
+    color: #071A52;
+    font-size: 1.8rem;
+    right: .5rem;
+    top: .8rem;
+}
+
+.table-filter {
+    display: flex;
+    justify-content: space-between;
+    margin: 10rem 0;
+}
+
+.table-filter .filter {
+    width: 25%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.table-filter .table-section {
+    width: 75%;
+}
+
+/*# sourceMappingURL=priceList.css.map */
+
+.chat {
+    width: 38%;
+    min-height: 40vh;
+    max-height: 80vh;
+
+}
+
+.pic {
+    border-radius: 50%;
+    background-image: url(https://img.freepik.com/premium-photo/astronaut-outer-open-space-planet-earth-stars-provide-background-erforming-space-planet-earth-sunrise-sunset-our-home-iss-elements-this-image-furnished-by-nasa_150455-16829.jpg?w=2000);
+    background-size: cover;
+    height: 3rem;
+    width: 3rem;
+}
+
+.live-dot {
+    width: .5rem;
+    height: .5rem;
+    background-color: #17B978;
+    border-radius: 50%;
+    animation: fade-out 2s linear infinite;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0.0
+    }
+
+    50% {
+        opacity: 1.0
+    }
+
+    100% {
+        opacity: 0.0
+    }
+}
